@@ -7,22 +7,30 @@ var enter_sound = "enter.mp3";
 var pop_sound = "pop.mp3";
 
 /* content */
-passage1_term = "[abhinand@arch]$ cat message | typewriter"
-passage1 = "Welcome back, Mr. Pinata"
+old_passage1_term = "[abhinand@arch]$ cat message | typewriter"
+passage1_term = "[abhinand@arch]$ cat /etc/about_me | typewriter"
+passage1 = ""
 
-passage2 = "We are glad that you were able to come to terms with our agreement. Being such a skilled individual, we knew that you would see sense the behind our bargain.";
+passage2 = "";
+old_passage2 = "We are glad that you were able to come to terms with our agreement. Being such a skilled individual, we knew that you would see sense the behind our bargain.";
 
-passage3 = "Oh, do not worry. Your family is safe in our hands. As soon as you complete your task, they will be released and you shall receive your compensation. Although we may be considered shady by many, we value our pride and honour. So you may trust our word."
+passage3 = ""
+old_passage3 = "Oh, do not worry. Your family is safe in our hands. As soon as you complete your task, they will be released and you shall receive your compensation. Although we may be considered shady by many, we value our pride and honour. So you may trust our word."
 
-passage4 = "Now I will be giving you the details of your task. You must track down this person and bring him to us at the earliest... Alive."
+passage4 = ""
+old_passage4 = "Now I will be giving you the details of your task. You must track down this person and bring him to us at the earliest... Alive."
 
-let passage5_details = ["Abhinand D Manoj", "3rd year student at Cochin University of Science and Technology, Ernakulam", "Backend Systems, Web Development, Data Structures and System Administration."]
-let passage5 = ["Your target is ", ". He is a ", ". He specializes in "]
+let passage5_details = ["Abhinand D Manoj", "Cochin University of Science and Technology, Ernakulam(3rd year student)", "Backend Systems, Web Development, Data Structures and System Administration."]
+let old_passage5_details = ["Abhinand D Manoj", "Cochin University of Science and Technology, Ernakulam", "Backend Systems, Web Development, Data Structures and System Administration."]
+let old_passage5 = ["Your target is ", ". He is a ", ". He specializes in "]
+
+let passage5 = ["I am ", ", a pre-final year student at ", ". I specialize in "]
 let passage5_elem = ["passage-5-1-1", "passage-5-2-1", "passage-5-1-2", "passage-5-2-2", "passage-5-1-3", "passage-5-2-3"]
 
-let passage6 = "He is known to be quick on his feet and has experience with code to solve various problems. This makes things difficult as he is less susceptible to faults."
+let passage6 = "I have experience using code to solve various problems. Piqued by the philosophy of free-software and free-software movement initiated by Richard Stallman. I enjoy research-oriented learning. Hobbies: Music, Football, Reading"
 
-let passage7 = "Be careful not to catch his attention while tracking him. We have provided some details regarding his skills and projects. The rest is all up to you. Good Luck"
+let passage7 = "Here are some of my projects:"
+let old_passage7 = "Be careful not to catch his attention while tracking him. We have provided some details regarding his skills and projects. The rest is all up to you. Good Luck"
 
 let passage8 = "[abhinand@arch]$ ls"
 
@@ -80,22 +88,22 @@ async function start() {
         playsound(type_music);
         await typeWriter(passage1, passage_1_elem);
         stopsound();
-        await sleep(para_delay);
+        // await sleep(para_delay);
 
         playsound(type_music);
         await typeWriter(passage2, passage_2_elem);
         stopsound();
-        sleep(para_delay);
+        // sleep(para_delay);
 
         playsound(type_music);
         await typeWriter(passage3, passage_3_elem);
         stopsound();
-        await sleep(para_delay);
+        // await sleep(para_delay);
 
         playsound(type_music);
         await typeWriter(passage4, passage_4_elem);
         stopsound();
-        await sleep(para_delay);
+        // await sleep(para_delay);
 
         let elem_index = 0;
         let passage_elem;
@@ -133,9 +141,6 @@ async function start() {
         console.log("hello");
         passage_1_term_elem.innerHTML = passage1_term;
         passage_1_elem.innerHTML = passage1;
-        passage_2_elem.innerHTML = passage2;
-        passage_3_elem.innerHTML = passage3;
-        passage_4_elem.innerHTML = passage4;
 
         let elem_index = 0;
         let passage_elem;
