@@ -1,8 +1,52 @@
 body {
     height: 100%;
     background: black;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
 }
 
-body > h1 {
-    color: white;
+#main-content {
+    width: 70%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0;
+}
+
+#click-to-continue {
+    margin-top: 25%;
+    text-align: center;
+    cursor: pointer;
+}
+
+#passages {
+    margin: 10% 0;
+    margin-bottom: 2%;
+    color: #00ff40;
+}
+
+.passage-green {
+    color: #00ff40;
+}
+
+.passage-blue {
+    color: #05fbff;
+}
+
+#proj-list {
+    list-style-type:  none;
+} 
+
+#projects {
+    text-align: center;
+}
+
+.details  {
+    color: #05fbff;
+}
+
+h1 {
+    color: #00ff40;
 }
