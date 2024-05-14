@@ -69,63 +69,89 @@ async function start() {
     let passage_7_elem = document.getElementById("passage-7");
     let passage_8_term_elem = document.getElementById("passage-8");
 
-    playsound(type_music);
-    await typeWriter(passage1_term, passage_1_term_elem);
-    stopsound();
-    playsound_noloop(enter_sound);
-    await sleep(para_delay);
-
-    playsound(type_music);
-    await typeWriter(passage1, passage_1_elem);
-    stopsound();
-    await sleep(para_delay);
-
-    playsound(type_music);
-    await typeWriter(passage2, passage_2_elem);
-    stopsound();
-    sleep(para_delay);
-
-    playsound(type_music);
-    await typeWriter(passage3, passage_3_elem);
-    stopsound();
-    await sleep(para_delay);
-
-    playsound(type_music);
-    await typeWriter(passage4, passage_4_elem);
-    stopsound();
-    await sleep(para_delay);
-
-    let elem_index = 0;
-    let passage_elem;
-    for (let j=0; j<passage5_details.length; j++) {
-        passage_5_elem = document.getElementById(passage5_elem[elem_index]);
+    let ans = confirm("Display animation?");
+    if (ans == true) {
         playsound(type_music);
-        await typeWriter(passage5[j], passage_5_elem);
-        elem_index++;
-        passage_5_elem = document.getElementById(passage5_elem[elem_index]);
-        await typeWriter(passage5_details[j], passage_5_elem);
-        elem_index++;
+        await typeWriter(passage1_term, passage_1_term_elem);
         stopsound();
+        playsound_noloop(enter_sound);
+        await sleep(para_delay);
+
+        playsound(type_music);
+        await typeWriter(passage1, passage_1_elem);
+        stopsound();
+        await sleep(para_delay);
+
+        playsound(type_music);
+        await typeWriter(passage2, passage_2_elem);
+        stopsound();
+        sleep(para_delay);
+
+        playsound(type_music);
+        await typeWriter(passage3, passage_3_elem);
+        stopsound();
+        await sleep(para_delay);
+
+        playsound(type_music);
+        await typeWriter(passage4, passage_4_elem);
+        stopsound();
+        await sleep(para_delay);
+
+        let elem_index = 0;
+        let passage_elem;
+        for (let j=0; j<passage5_details.length; j++) {
+            passage_5_elem = document.getElementById(passage5_elem[elem_index]);
+            playsound(type_music);
+            await typeWriter(passage5[j], passage_5_elem);
+            elem_index++;
+            passage_5_elem = document.getElementById(passage5_elem[elem_index]);
+            await typeWriter(passage5_details[j], passage_5_elem);
+            elem_index++;
+            stopsound();
+        }
+
+        playsound(type_music);
+        await typeWriter(passage6, passage_6_elem);
+        stopsound();
+        sleep(delay);
+        await sleep(para_delay);
+
+        playsound(type_music);
+        await typeWriter(passage7, passage_7_elem);
+        stopsound();
+        sleep(para_delay);
+
+        playsound(type_music);
+        await typeWriter(passage8, passage_8_term_elem);
+        stopsound();
+        playsound_noloop(enter_sound);
+        await sleep(para_delay);
+
+        playsound_noloop(pop_sound);
     }
+    else {
+        console.log("hello");
+        passage_1_term_elem.innerHTML = passage1_term;
+        passage_1_elem.innerHTML = passage1;
+        passage_2_elem.innerHTML = passage2;
+        passage_3_elem.innerHTML = passage3;
+        passage_4_elem.innerHTML = passage4;
 
-    playsound(type_music);
-    await typeWriter(passage6, passage_6_elem);
-    stopsound();
-    sleep(delay);
-    await sleep(para_delay);
+        let elem_index = 0;
+        let passage_elem;
+        for (let j=0; j<passage5_details.length; j++) {
+            passage_5_elem = document.getElementById(passage5_elem[elem_index]);
+            passage_5_elem.innerHTML = passage5[j];
+            elem_index++;
+            passage_5_elem = document.getElementById(passage5_elem[elem_index]);
+            passage_5_elem.innerHTML = passage5_details[j];
+            elem_index++;
+        }
 
-    playsound(type_music);
-    await typeWriter(passage7, passage_7_elem);
-    stopsound();
-    sleep(para_delay);
-
-    playsound(type_music);
-    await typeWriter(passage8, passage_8_term_elem);
-    stopsound();
-    playsound_noloop(enter_sound);
-    await sleep(para_delay);
-
-    playsound_noloop(pop_sound);
+        passage_6_elem.innerHTML = passage6;
+        passage_7_elem.innerHTML = passage7;
+        passage_8_term_elem.innerHTML = passage8;
+    }
     document.getElementById("projects").style.display = "block";
     document.getElementById("socials").style.display = "block";
 }
