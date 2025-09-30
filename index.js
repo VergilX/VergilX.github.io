@@ -20,14 +20,14 @@ old_passage3 = "Oh, do not worry. Your family is safe in our hands. As soon as y
 passage4 = ""
 old_passage4 = "Now I will be giving you the details of your task. You must track down this person and bring him to us at the earliest... Alive."
 
-let passage5_details = ["Abhinand D Manoj", "Cochin University of Science and Technology, Ernakulam(4th year student)", "Backend Systems, Web Development, Data Structures and System Administration."]
+let passage5_details = ["Abhinand D Manoj", "Cochin University of Science and Technology, Ernakulam", "Backend Systems, Web Development and Computer Networks."]
 let old_passage5_details = ["Abhinand D Manoj", "Cochin University of Science and Technology, Ernakulam", "Backend Systems, Web Development, Data Structures and System Administration."]
 let old_passage5 = ["Your target is ", ". He is a ", ". He specializes in "]
 
-let passage5 = ["I am ", ", a final year student at ", ". I specialize in "]
+let passage5 = ["I am ", ", a graduate from ", ". I specialize in "]
 let passage5_elem = ["passage-5-1-1", "passage-5-2-1", "passage-5-1-2", "passage-5-2-2", "passage-5-1-3", "passage-5-2-3"]
 
-let passage6 = "I have experience using code to solve various problems. Piqued by the philosophy of free-software and free-software movement initiated by Richard Stallman. I enjoy research-oriented learning. Hobbies: Music, Football, Reading"
+let passage6 = "I have experience using code to solve various problems. Piqued by the philosophy of free-software and free-software movement initiated by Richard Stallman. I enjoy research-oriented learning. Hobbies: Music, Football, Games."
 
 let passage7 = "Here are some of my projects:"
 let old_passage7 = "Be careful not to catch his attention while tracking him. We have provided some details regarding his skills and projects. The rest is all up to you. Good Luck"
